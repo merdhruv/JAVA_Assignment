@@ -33,8 +33,17 @@ class Book{
 }
 class BookManagement {
 	static void getBookById(HashMap<Integer,Book>b) {
+		System.out.println("Enter the isbn : ");
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
+		System.out.println(b.get(n));
+	}
+	static void reducePrice(HashMap<Integer,Book>b) {
+		System.out.println("Enter the isbn : ");
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		Book  b1 = b.get(n);
+		b1.price += b1.price*0.1;
 		System.out.println(b.get(n));
 	}
 }
@@ -55,6 +64,7 @@ public class BookMap {
 			System.out.println(m.getKey()+ " " + m.getValue());
 		}
 		BookManagement.getBookById(bookList);
+		BookManagement.reducePrice(bookList);
 	}
 
 }

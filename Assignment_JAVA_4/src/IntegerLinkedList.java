@@ -34,6 +34,9 @@ class LinkedListManagement{
 		Scanner s =  new Scanner(System.in);
 		ll.remove(s.nextInt());
 	}
+	static void deleteAfterNode(LinkedList<Integer>ll) {
+		
+	}
 	static void reverseList(LinkedList <Integer> ll) {
 		LinkedList <Integer> newll = new LinkedList<>();
 		for(int i = 0; i < ll.size() ;i++) {
