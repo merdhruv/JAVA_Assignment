@@ -117,6 +117,9 @@ public class ShoppingCart {
 					int total = Cart.totalPrice();
 					System.out.println("Your Total price to be paid : " + total);
 					token = 0;
+				break;
+				
+				default: System.out.println("Enter a valid option :");
 			}
 		}
 		
