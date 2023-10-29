@@ -62,12 +62,9 @@ class ObjectFileManager{
 		
 		Student s;
 		try {
-			while(true) 
-			{				
-			//while((s = (Student) oi.readObject()) != null) {
-				s = (Student) oi.readObject();
+			
+			while((s = (Student) oi.readObject()) != null) {
 				s.display();
-				break;
 			}
 		}
 		catch(EOFException e) {
@@ -84,12 +81,9 @@ class ObjectFileManager{
 		Student s;
 		ArrayList<Student> sl = new ArrayList<>();
 		try {
-			//while((s = (Student) oi.readObject()) != null) {
-			while(true) 
-			{
-				s = (Student) oi.readObject();
+			while((s = (Student) oi.readObject()) != null) {
+			
 				sl.add(s);
-				break;
 			}
 		}
 		catch(EOFException e) {
@@ -116,12 +110,8 @@ class ObjectFileManager{
 		Student s;
 		ArrayList<Student> sl = new ArrayList<>();
 		try {
-			//while((s = (Student) oi.readObject()) != null) {
-				while(true)
-			{
-				s = (Student) oi.readObject();
+			while((s = (Student) oi.readObject()) != null) {
 				sl.add(s);
-				break;
 			}
 		}
 		catch(EOFException e) {
@@ -154,12 +144,9 @@ class ObjectFileManager{
 		Student s;
 		ArrayList<Student> sl = new ArrayList<>();
 		try {
-			//while((s = (Student) oi.readObject()) != null) {
-			while(true) 
-			{
-				s = (Student) oi.readObject();
+			while((s = (Student) oi.readObject()) != null) {
+			
 				sl.add(s);
-				break;
 			}
 		}
 		catch(EOFException e) {
@@ -187,10 +174,10 @@ public class ObjectFileHandling {
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
 		ObjectFileManager.studentFileWriting();
 		System.out.println("-----------------------------------");
-		ObjectFileManager.studentFileRead();
+//		ObjectFileManager.studentFileRead();
 		ObjectFileManager.sortObject();	
-		System.out.println("------------------------------------");
-		ObjectFileManager.getResult();	
-		ObjectFileManager.noOfPassed("dac");	
+//		System.out.println("------------------------------------");
+//		ObjectFileManager.getResult();	
+//		ObjectFileManager.noOfPassed("dac");	
 	}
 }
